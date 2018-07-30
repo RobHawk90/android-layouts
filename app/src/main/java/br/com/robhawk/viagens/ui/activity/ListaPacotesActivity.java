@@ -1,5 +1,6 @@
 package br.com.robhawk.viagens.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -18,6 +19,8 @@ public class ListaPacotesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = new Intent(this, ResumoPacoteActivity.class);
+        startActivity(intent);
         setContentView(R.layout.activity_lista_pacotes);
         setTitle(TITULO_APPBAR);
         configuraLista();
